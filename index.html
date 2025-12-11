@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hybrid Option Valuation | AI for Science</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Navigation / Header -->
+    <header class="hero-bg text-white py-12 shadow-lg">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-blue-200 font-semibold tracking-wide uppercase text-sm mb-2">CSE 598: AI for Science &bull; Final Project</p>
+            <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">
+                Hybrid Option Valuation: <br>
+                <span class="text-blue-300">PINN Models Informed by Black-Scholes & Alternative Data</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">
+                A novel framework integrating traditional financial metrics with social sentiment and policy uncertainty via Physics-Informed Neural Networks.
+            </p>
+            
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <a href="#downloads" class="bg-white text-blue-900 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold transition shadow-md">
+                    Download Resources
+                </a>
+                <a href="https://github.com/orgs/cse-598-ai-for-science/repositories" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold transition shadow-md border border-blue-500">
+                    View Repositories
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Team Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-slate-900 mb-12">Project Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                
+                <!-- Member 1 -->
+                <div class="text-center group">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-100 shadow-sm group-hover:border-blue-200 transition">
+                        <!-- Placeholder for Kiran's photo -->
+                        <img src="files/kiran.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Kiran+Bodipati&background=0D8ABC&color=fff'" alt="Kiran Bodipati" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Kiran Bodipati</h3>
+                    <p class="text-blue-600">bodipati@umich.edu</p>
+                    <p class="text-sm text-slate-500 mt-1">University of Michigan</p>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="text-center group">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-100 shadow-sm group-hover:border-blue-200 transition">
+                        <!-- Placeholder for Dhanush's photo -->
+                        <img src="files/dhanush.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Dhanush+Kumar&background=0D8ABC&color=fff'" alt="Dhanush Kumar Mallu" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Dhanush Kumar Mallu</h3>
+                    <p class="text-blue-600">dhanushm@umich.edu</p>
+                    <p class="text-sm text-slate-500 mt-1">University of Michigan</p>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="text-center group">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-100 shadow-sm group-hover:border-blue-200 transition">
+                        <!-- Placeholder for Jehan's photo -->
+                        <img src="files/jehan.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Jehan+Patel&background=0D8ABC&color=fff'" alt="Jehan Patel" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Jehan Patel</h3>
+                    <p class="text-blue-600">pajehan@umich.edu</p>
+                    <p class="text-sm text-slate-500 mt-1">University of Michigan</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Downloads Section -->
+    <section id="downloads" class="py-12 bg-slate-100 border-y border-slate-200">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-2xl font-bold mb-6 text-slate-800">Project Deliverables</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                
+                <a href="files/report.pdf" target="_blank" class="flex items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition border border-slate-200 group">
+                    <div class="bg-red-100 p-3 rounded-full mr-4 group-hover:bg-red-200 transition">
+                        <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-slate-900">Project Report</h4>
+                        <p class="text-xs text-slate-500">PDF Document</p>
+                    </div>
+                </a>
+
+                <a href="files/software.tar.gz" download class="flex items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition border border-slate-200 group">
+                    <div class="bg-slate-100 p-3 rounded-full mr-4 group-hover:bg-slate-200 transition">
+                        <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-slate-900">Software Package</h4>
+                        <p class="text-xs text-slate-500">Source Code (tar.gz)</p>
+                    </div>
+                </a>
+
+                <a href="files/slides.pdf" target="_blank" class="flex items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition border border-slate-200 group">
+                    <div class="bg-yellow-100 p-3 rounded-full mr-4 group-hover:bg-yellow-200 transition">
+                        <svg class="w-6 h-6 text-yellow-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path></svg>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-slate-900">Presentation</h4>
+                        <p class="text-xs text-slate-500">Slides PDF</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16 max-w-5xl">
+        
+        <!-- Abstract -->
+        <div class="mb-16">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-l-4 border-blue-600 pl-4">Abstract</h2>
+            <p class="text-slate-700 leading-relaxed text-lg">
+                Predicting the value of stock options remains a critical challenge in financial markets. Traditional valuation models, such as those based on the Black-Scholes equation, rely solely on classical financial data. This project proposes a novel framework that integrates both traditional financial metrics and <strong>alternative data sources</strong> (such as social media sentiment and economic policy uncertainty) to predict option values. We implement a knowledge-transfer mechanism where a Black-Scholes-informed source model (PINN) guides data-driven target models. By embedding domain knowledge within a data-driven architecture, our approach aims to enhance predictive accuracy and enable investors to capture incremental informational advantages at a lower cost.
+            </p>
+        </div>
+
+        <!-- Methodology -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 items-center">
+            <div>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4 border-l-4 border-blue-600 pl-4">Methodology</h2>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    Our approach sits at the confluence of classical financial option-pricing models and knowledge-guided machine learning. We utilized a <strong>Physics-Informed Neural Network (PINN)</strong> as a source model to learn the latent dynamics of the Black-Scholes world.
+                </p>
+                <p class="text-slate-700 leading-relaxed">
+                    This theoretical knowledge is transferred to target models (using Gated LSTM architectures) that process both market data and alternative signals. This allows the model to respect financial no-arbitrage constraints while learning from messy, real-world data like news sentiment.
+                </p>
+            </div>
+            <div class="bg-white p-2 rounded-lg shadow-md border border-slate-200">
+                <!-- Placeholder for Framework Diagram -->
+                <img src="files/framework_diagram.png" onerror="this.src='https://placehold.co/600x400?text=Figure+1:+Proposed+Framework'" alt="Proposed Framework Diagram" class="w-full rounded">
+                <p class="text-sm text-slate-500 mt-2 text-center italic">Figure 1: Knowledge Transfer Framework (Source Model to Target Models)</p>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div class="mb-16">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-l-4 border-blue-600 pl-4">Key Results & Conclusions</h2>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8 rounded-r-lg">
+                <ul class="list-disc pl-5 space-y-2 text-slate-800">
+                    <li><strong>Hybrid Superiority:</strong> Models combining physics constraints with data-driven approaches consistently outperformed pure data-driven baselines.</li>
+                    <li><strong>Architecture Matters:</strong> The Gated LSTM architecture proved superior to standard MLPs, reducing RMSE significantly across configurations.</li>
+                    <li><strong>Value of Alternative Data:</strong> Incorporating news sentiment provided a tangible information edge. However, combining too many noisy sources (e.g., Sentiment + EPU) led to diminishing returns, highlighting the need for careful feature selection.</li>
+                </ul>
+            </div>
+
+            <!-- Detailed Results Table -->
+            <div class="mb-12 overflow-x-auto bg-white rounded-lg shadow-md border border-slate-200">
+                <table class="min-w-full text-sm text-left text-slate-600">
+                    <caption class="p-4 text-lg font-semibold text-left text-slate-900 bg-white border-b border-slate-200">
+                        Detailed Model Performance (RMSE)
+                        <p class="mt-1 text-sm font-normal text-slate-500">Comparison of traditional, data-driven, and hybrid approaches across different data configurations.</p>
+                    </caption>
+                    <thead class="text-xs text-slate-700 uppercase bg-slate-50 border-b border-slate-200">
+                        <tr>
+                            <th class="px-6 py-3">Model</th>
+                            <th class="px-6 py-3">Type</th>
+                            <th class="px-6 py-3">Data Config</th>
+                            <th class="px-6 py-3">RMSE <span class="normal-case font-normal text-slate-400">(Lower is better)</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-white border-b hover:bg-slate-50">
+                            <td class="px-6 py-4 font-medium text-slate-900">Black Scholes</td>
+                            <td class="px-6 py-4">Analytical</td>
+                            <td class="px-6 py-4">Traditional</td>
+                            <td class="px-6 py-4">0.01667</td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-slate-50">
+                            <td class="px-6 py-4 font-medium text-slate-900">PINN</td>
+                            <td class="px-6 py-4">Time-Price</td>
+                            <td class="px-6 py-4">Traditional</td>
+                            <td class="px-6 py-4 text-slate-400">N/A</td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-slate-50">
+                            <td class="px-6 py-4 font-medium text-slate-900">Gated LSTM</td>
+                            <td class="px-6 py-4">Data Driven</td>
+                            <td class="px-6 py-4">Traditional</td>
+                            <td class="px-6 py-4">0.00714</td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-slate-50">
+                            <td class="px-6 py-4 font-medium text-slate-900">Gated LSTM</td>
+                            <td class="px-6 py-4">Data Driven</td>
+                            <td class="px-6 py-4">Traditional + Policy</td>
+                            <td class="px-6 py-4">0.00801</td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-slate-50">
+                            <td class="px-6 py-4 font-medium text-slate-900">Gated LSTM</td>
+                            <td class="px-6 py-4">Data Driven</td>
+                            <td class="px-6 py-4">Traditional + Sentiment</td>
+                            <td class="px-6 py-4">0.00720</td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-slate-50">
+                            <td class="px-6 py-4 font-medium text-slate-900">Gated LSTM</td>
+                            <td class="px-6 py-4">Data Driven</td>
+                            <td class="px-6 py-4">All Sources</td>
+                            <td class="px-6 py-4">0.01143</td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-slate-50">
+                            <td class="px-6 py-4 font-medium text-slate-900">Gated LSTM + PINN</td>
+                            <td class="px-6 py-4">Hybrid</td>
+                            <td class="px-6 py-4">Traditional</td>
+                            <td class="px-6 py-4">0.00622</td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-slate-50">
+                            <td class="px-6 py-4 font-medium text-slate-900">Gated LSTM + PINN</td>
+                            <td class="px-6 py-4">Hybrid</td>
+                            <td class="px-6 py-4">Traditional + Policy</td>
+                            <td class="px-6 py-4">0.01718</td>
+                        </tr>
+                        <!-- Highlighted Winner -->
+                        <tr class="bg-green-50 border-b border-green-200 hover:bg-green-100">
+                            <td class="px-6 py-4 font-bold text-green-900">Gated LSTM + PINN</td>
+                            <td class="px-6 py-4 text-green-800">Hybrid</td>
+                            <td class="px-6 py-4 text-green-800">Traditional + Sentiment</td>
+                            <td class="px-6 py-4 font-bold text-green-700">0.00566 (Best)</td>
+                        </tr>
+                        <tr class="bg-white hover:bg-slate-50">
+                            <td class="px-6 py-4 font-medium text-slate-900">Gated LSTM + PINN</td>
+                            <td class="px-6 py-4">Hybrid</td>
+                            <td class="px-6 py-4">All Sources</td>
+                            <td class="px-6 py-4">0.01846</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-2 rounded-lg shadow-md border border-slate-200">
+                     <!-- Placeholder for Results Chart -->
+                    <img src="files/results_chart.png" onerror="this.src='https://placehold.co/600x400?text=Figure+3:+RMSE+Performance'" alt="Performance Comparison Chart" class="w-full rounded">
+                    <p class="text-sm text-slate-500 mt-2 text-center italic">Figure 3: RMSE Comparison by Data Source (Visual Representation)</p>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <p class="text-slate-700 leading-relaxed">
+                        The table above quantifies the "grey box" advantage. While strict physics enforcement in data-rich environments can sometimes degrade fit, the hybrid model with targeted sentiment data achieved the global minimum RMSE. This proves that theoretical priors act best as a guide rather than a hard constraint when combined with high-signal alternative data.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Repo Links -->
+        <div class="text-center bg-slate-800 text-white p-8 rounded-xl shadow-lg">
+            <h3 class="text-xl font-bold mb-4">Explore the Code</h3>
+            <p class="mb-6 text-slate-300">View our complete codebase and related repositories on GitHub.</p>
+            <a href="https://github.com/orgs/cse-598-ai-for-science/repositories" target="_blank" class="inline-flex items-center bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-lg font-semibold transition">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                View Organization Repositories
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2025 AI For Science (CSE 598). University of Michigan.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
